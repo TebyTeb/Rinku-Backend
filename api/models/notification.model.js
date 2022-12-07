@@ -1,4 +1,4 @@
-const moongose = require("moongose");
+const mongoose = require("mongoose");
 require("mongoose-type-email");
 
 const notificationSchema = new mongoose.Schema({
@@ -7,9 +7,9 @@ const notificationSchema = new mongoose.Schema({
     ref: 'user',
     required: true
 },
-  suscriptionid:  {
+  subscriptionid:  {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'suscription',
+    ref: 'subscription',
     required: true
 },
   date: {
