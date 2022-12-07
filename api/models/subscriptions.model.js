@@ -11,8 +11,7 @@ const subscriptionSchema = new mongoose.Schema({
     type: String,
     required: [true, "Name is required"],
   },
-  plans: [
-    {
+  plans: {
       name: {
         type: String,
         require: true,
@@ -26,7 +25,6 @@ const subscriptionSchema = new mongoose.Schema({
         require: true,
       },
     },
-  ],
   unsublink: {
     type: String,
     require: true,
@@ -39,14 +37,13 @@ const subscriptionSchema = new mongoose.Schema({
     type: Date,
     require: true,
   },
-  paiment_method: {
+  payment_method: {
     type: String,
     require: true,
   },
   notes: {
     type: String,
-    maxLength: [200, "Max 200 caracte"],
-    require: true,
+    maxLength: [200, "Max 200 caracte"]
   },
 });
 
