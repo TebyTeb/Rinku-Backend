@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 require("mongoose-type-email");
 
-const suscriptionSchema = new mongoose.Schema({
+const subscriptionSchema = new mongoose.Schema({
   userid: {
     type: ObjectId,
     required: true,
@@ -49,5 +49,5 @@ const suscriptionSchema = new mongoose.Schema({
   },
 });
 
-const suscriptionModel = mongoose.model("suscription", suscriptionSchema);
-module.exports = suscriptionModel;
+const subscriptionModel = mongoose.model("subscription", subscriptionSchema);
+module.exports = subscriptionModel;

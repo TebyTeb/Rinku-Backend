@@ -1,15 +1,15 @@
 const router = require("express").Router();
 
 const {
-  getSuscriptions,
-  createSuscriptions,
-  updateSuscriptions,
-  deleteSuscriptions,
-} = require("../controllers/suscription.controller");
+  getsubScriptions,
+  createSubscriptions,
+  updateSubscriptions,
+  deleteSubscriptions,
+} = require("../controllers/subscription.controller");
 
-router.get("/", getSuscriptions);
-router.post("/", createSuscriptions);
-router.put("/:id", updateSuscriptions);
-router.delete("/:id", deleteSuscriptions);
+router.get("/", getsubScriptions);
+router.post("/", createSubscriptions);
+router.put("/:id", updateSubscriptions);
+router.delete("/:id", deleteSubscriptions);
 
 module.exports = router;

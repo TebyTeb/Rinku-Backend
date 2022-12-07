@@ -6,7 +6,7 @@ const notificationSchema = new mongoose.Schema({
     type: ObjectId,
     required: true,
   },
-  suscriptionid: {
+  subscriptionid: {
     type: ObjectId,
     required: true,
   },
