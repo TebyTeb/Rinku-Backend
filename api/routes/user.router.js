@@ -1,13 +1,15 @@
 const router = require('express').Router()
 
-/* const {
+const {
   authUser
-} = require('../utils')  */
+} = require('../utils') 
 
 const {
-  getUsers
+  getAllUsers,
+  getProfile
 } = require('../controllers/user.controller')
 
-router.get('/', getUsers)
+router.get('/', getAllUsers)
+router.get('/profile', authUser, getProfile)
 
 module.exports = router
