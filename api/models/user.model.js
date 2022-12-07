@@ -4,15 +4,11 @@ require('mongoose-type-email');
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: [true, 'Name is required'],
-    minLength: [3, 'Name too short'],
-    maxLength: [20, 'Name too long']
+    required: [true, 'Name is required']
   },
   surname: {
     type: String,
-    required: [true, 'Surname required'],
-    minLength: [3, 'Surname too short'],
-    maxLength: [20, 'Surname too long']
+    required: [true, 'Surname required']
   },
   age: {
     type: Number,
@@ -27,13 +23,14 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Password is required']
   },
-  subscriptions: {
-    type: Array
+  telephone: {
+    type: Number,
+    minLength: [9, 'Telephone is to long'],
+    maxLength: [9, 'Telephone is to long']
   },
-  notifications: {
-    type: Array
+  budget: {
+    type: Number
   }
-
 });
 
 const userModel = mongoose.model('user', userSchema);
