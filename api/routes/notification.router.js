@@ -1,5 +1,7 @@
 const router = require("express").Router();
 
+const { authUser } =require("../utils")
+
 const {
   getNotification,
   createNotification,
@@ -7,9 +9,9 @@ const {
   deleteNotification
 } = require("../controllers/notification.controller");
 
-router.get("/", getNotification);
-router.post("/", createNotification);
-router.put("/:id", updateNotification);
-router.delete("/:id", deleteNotification);
+router.get("/", authUser, getNotification);
+router.post("/", authUser, createNotification);
+router.put("/:id", authUser, updateNotification);
+router.delete("/:id", authUser, deleteNotification);
 
 module.exports = router;
