@@ -48,5 +48,3 @@ module.exports = {
   signup,
   login
 }
-
-const UserModel = require('../models/users.model')
