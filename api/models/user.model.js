@@ -26,8 +26,8 @@ const userSchema = new mongoose.Schema({
   telephone: {
     type: Number,
     required: true,
-    minLength: [9, "Telephone is to long"],
-    maxLength: [9, "Telephone is to long"],
+    minLength: [9, "Telephone is too short"],
+    maxLength: [9, "Telephone is too long"],
   },
   budget: {
     type: Number,
