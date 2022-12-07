@@ -3,9 +3,10 @@ require("mongoose-type-email");
 
 const suscriptionSchema = new mongoose.Schema({
   userid: {
-    type: ObjectId,
-    required: true,
-  },
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'user',
+    required: true
+},
   name: {
     type: String,
     required: [true, "Name is required"],
