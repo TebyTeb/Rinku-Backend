@@ -1,32 +1,32 @@
-const Suscription = require("../models/suscriptions.model");
+const Subscription = require("../models/subscriptions.model");
 
-function getSuscriptions(req, res) {
-  Suscription.find({ userid: req.params.userid })
+function getSubscriptions(req, res) {
+  Subscription.find({ userid: req.params.userid })
     .then((sus) => res.json(sus))
     .catch((err) => res.json(err));
 }
 
-function createSuscriptions(req, res) {
-  Suscription.create(req.body)
+function createSubscriptions(req, res) {
+  Subscription.create(req.body)
     .then((sus) => res.json(sus))
     .catch((err) => res.json(err));
 }
 
-function updateSuscriptions(req, res) {
-  Suscription.updateOne({ _id: req.params.id }, req.body)
+function updateSubscriptions(req, res) {
+  Subscription.updateOne({ _id: req.params.id }, req.body)
     .then((sus) => res.json(sus))
     .catch((err) => res.json(err));
 }
 
-function deleteSuscriptions(req, res) {
-  Suscription.deleteOne({ _id: req.params.id })
+function deleteSubscriptions(req, res) {
+  Subscription.deleteOne({ _id: req.params.id })
     .then((sus) => res.json(sus))
     .catch((err) => res.json(err));
 }
 
 module.exports = {
-  getSuscriptions,
-  createSuscriptions,
-  updateSuscriptions,
-  deleteSuscriptions,
+  getSubscriptions,
+  createSubscriptions,
+  updateSubscriptions,
+  deleteSubscriptions,
 };
