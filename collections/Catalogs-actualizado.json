@@ -1,0 +1,291 @@
+[{
+  "_id": {
+    "$oid": "638e8fd4c9fe04ee9c379c3c"
+  },
+  "name": "Amazon Prime",
+  "plans": [
+    {
+      "hiring": "month",
+      "name": "Amazon Prime (monthly)",
+      "quantity": {
+        "$numberDecimal": "4.99"
+      }
+    },
+    {
+      "hiring": "year",
+      "quantity": {
+        "$numberDecimal": "49.90"
+      },
+      "name": "Amazon Prime (anually)"
+    }
+  ],
+  "iconName": "amazon"
+},{
+  "_id": {
+    "$oid": "638e9686c9fe04ee9c379c42"
+  },
+  "name": "Crunchyroll",
+  "plans": [
+    {
+      "name": "FAN",
+      "hiring": "month",
+      "quantity": {
+        "$numberDecimal": "4.99"
+      }
+    },
+    {
+      "name": "MEGA FAN (1-MES)",
+      "hiring": "month",
+      "quantity": {
+        "$numberDecimal": "6.49"
+      }
+    },
+    {
+      "name": "MEGA FAN (12-MESES)",
+      "hiring": "year",
+      "quantity": {
+        "$numberDecimal": "64.99"
+      }
+    }
+  ],
+  "iconName": "crunchyroll"
+},{
+  "_id": {
+    "$oid": "6396fbb06f334c49912dc8bb"
+  },
+  "name": "Spotify",
+  "plans": [
+    {
+      "name": "Individual",
+      "hiring": "month",
+      "quantity": 9.99,
+      "_id": {
+        "$oid": "6396fbb06f334c49912dc8bc"
+      }
+    },
+    {
+      "name": "Duo",
+      "hiring": "month",
+      "quantity": 12.99,
+      "_id": {
+        "$oid": "6396fbb06f334c49912dc8bd"
+      }
+    },
+    {
+      "name": "Familiar",
+      "hiring": "month",
+      "quantity": 15.99,
+      "_id": {
+        "$oid": "6396fbb06f334c49912dc8be"
+      }
+    },
+    {
+      "name": "Estudiantes",
+      "hiring": "month",
+      "quantity": 4.99,
+      "_id": {
+        "$oid": "6396fbb06f334c49912dc8bf"
+      }
+    }
+  ],
+  "iconName": "spotify"
+},{
+  "_id": {
+    "$oid": "6396fd396f334c49912dc8c2"
+  },
+  "name": "HBO Max",
+  "plans": [
+    {
+      "name": "Pago Mensual",
+      "hiring": "month",
+      "quantity": 8.99,
+      "_id": {
+        "$oid": "6396fd396f334c49912dc8c3"
+      }
+    },
+    {
+      "name": "Pago Anual",
+      "hiring": "year",
+      "quantity": 69.99,
+      "_id": {
+        "$oid": "6396fd396f334c49912dc8c4"
+      }
+    }
+  ],
+  "iconName": "hbo"
+},{
+  "_id": {
+    "$oid": "639700a16f334c49912dc8c7"
+  },
+  "name": "DAZN",
+  "plans": [
+    {
+      "name": "DAZN Esencial (1-MES)",
+      "hiring": "month",
+      "quantity": 12.99,
+      "_id": {
+        "$oid": "639700a16f334c49912dc8c8"
+      }
+    },
+    {
+      "name": "DAZN Esencial (12-MESES)",
+      "hiring": "year",
+      "quantity": 129.99,
+      "_id": {
+        "$oid": "639700a16f334c49912dc8c9"
+      }
+    },
+    {
+      "name": "DAZN Total",
+      "hiring": "month",
+      "quantity": 24.99,
+      "_id": {
+        "$oid": "639700a16f334c49912dc8ca"
+      }
+    },
+    {
+      "name": "DAZN LaLiga",
+      "hiring": "month",
+      "quantity": 18.99,
+      "_id": {
+        "$oid": "639700a16f334c49912dc8cb"
+      }
+    }
+  ],
+  "iconName": "dazn"
+},{
+  "_id": {
+    "$oid": "639702126f334c49912dc8ce"
+  },
+  "name": "Adobe",
+  "plans": [
+    {
+      "name": "Particulares",
+      "hiring": "month",
+      "quantity": 62.99,
+      "_id": {
+        "$oid": "639702126f334c49912dc8cf"
+      }
+    },
+    {
+      "name": "Estudiantes y profesores",
+      "hiring": "month",
+      "quantity": 19.66,
+      "_id": {
+        "$oid": "639702126f334c49912dc8d0"
+      }
+    },
+    {
+      "name": "Equipos",
+      "hiring": "month",
+      "quantity": 31.49,
+      "_id": {
+        "$oid": "639702126f334c49912dc8d1"
+      }
+    }
+  ],
+  "iconName": "adobe"
+},{
+  "_id": {
+    "$oid": "6397043c6f334c49912dc8d4"
+  },
+  "name": "Zoom",
+  "plans": [
+    {
+      "name": "Zoom Phone PRO",
+      "hiring": "year",
+      "quantity": 89.28,
+      "_id": {
+        "$oid": "6397043c6f334c49912dc8d5"
+      }
+    },
+    {
+      "name": "Zoom Phone PRO GLOBAL SELECT",
+      "hiring": "year",
+      "quantity": 223,
+      "_id": {
+        "$oid": "6397043c6f334c49912dc8d6"
+      }
+    }
+  ],
+  "iconName": "zoom"
+},{
+  "_id": {
+    "$oid": "639706836f334c49912dc8da"
+  },
+  "name": "Playstation Plus",
+  "plans": [
+    {
+      "name": "Plus (1-Mes)",
+      "hiring": "month",
+      "quantity": 7.99,
+      "_id": {
+        "$oid": "639706836f334c49912dc8db"
+      }
+    },
+    {
+      "name": "Plus (12-Meses)",
+      "hiring": "year",
+      "quantity": 59.99,
+      "_id": {
+        "$oid": "639706836f334c49912dc8dc"
+      }
+    }
+  ],
+  "iconName": "psplus"
+},{
+  "_id": {
+    "$oid": "639707896f334c49912dc8df"
+  },
+  "name": "Xbox Game Pass",
+  "plans": [
+    {
+      "name": "Ultimate",
+      "hiring": "month",
+      "quantity": 12.99,
+      "_id": {
+        "$oid": "639707896f334c49912dc8e0"
+      }
+    },
+    {
+      "name": "PC",
+      "hiring": "month",
+      "quantity": 9.99,
+      "_id": {
+        "$oid": "639707896f334c49912dc8e1"
+      }
+    },
+    {
+      "name": "Consola",
+      "hiring": "month",
+      "quantity": 9.99,
+      "_id": {
+        "$oid": "639707896f334c49912dc8e2"
+      }
+    }
+  ],
+  "iconName": "xbox"
+},{
+  "_id": {
+    "$oid": "639708716f334c49912dc8e5"
+  },
+  "name": "Disney +",
+  "plans": [
+    {
+      "name": "Plan Mensual",
+      "hiring": "month",
+      "quantity": 8.99,
+      "_id": {
+        "$oid": "639708716f334c49912dc8e6"
+      }
+    },
+    {
+      "name": "Plan Anual",
+      "hiring": "year",
+      "quantity": 89.9,
+      "_id": {
+        "$oid": "639708716f334c49912dc8e7"
+      }
+    }
+  ]
+}]
