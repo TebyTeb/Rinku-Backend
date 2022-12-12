@@ -19,6 +19,9 @@ const catalogSchema = new mongoose.Schema({
   instructions: {
     type: String,
   },
+  iconName: {
+    type: String
+  }
 });
 
 const catalogModel = mongoose.model("catalog", catalogSchema);

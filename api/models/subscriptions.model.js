@@ -28,11 +28,11 @@ const subscriptionSchema = new mongoose.Schema({
     },
   unsublink: {
     type: String,
-    require: true,
+    require: false,
   },
   instructions: {
     type: String,
-    require: true,
+    require: false,
   },
   hiring_day: {
     type: Date,
@@ -40,12 +40,15 @@ const subscriptionSchema = new mongoose.Schema({
   },
   payment_method: {
     type: String,
-    require: true,
+    require: false,
   },
   notes: {
     type: String,
     maxLength: [200, "Max 200 caracte"]
   },
+  iconName: {
+    type: String
+  }
 });
 
 const subscriptionModel = mongoose.model("subscription", subscriptionSchema);

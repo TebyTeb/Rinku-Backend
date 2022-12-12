@@ -4,7 +4,7 @@ function getSubscriptions(req, res) {
   Subscription
     .find({ userid: res.locals.user._id })
     .then(subs => {
-
+      console.log(subs)
       let result = []
 
       subs.map(sub => {
@@ -17,6 +17,7 @@ function getSubscriptions(req, res) {
             totalYears += 1;
             nextPayment.setFullYear(nextPayment.getFullYear() + 1);
           }
+          console.log({...sub._doc, "nextPayment": nextPayment, "totalPaid": totalYears*sub.plan.quantity})
           result.push({...sub._doc, "nextPayment": nextPayment, "totalPaid": totalYears*sub.plan.quantity})
         }
 
@@ -33,7 +34,7 @@ function getSubscriptions(req, res) {
               nextPayment.setMonth(nextPayment.getMonth() + 1);
             }
           }
-
+          console.log({...sub._doc, "nextPayment": nextPayment, "totalPaid": totalMonths*sub.plan.quantity})
           result.push({...sub._doc, "nextPayment": nextPayment, "totalPaid": totalMonths*sub.plan.quantity})
         }
       })
