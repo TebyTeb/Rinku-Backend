@@ -1,7 +1,7 @@
 const Users = require("../models/user.model");
 const Subscription = require("../models/subscriptions.model");
 const Notification = require("../models/notification.model");
-//const bcrypt = require('bcrypt') // importamos para encryptar el password
+const bcrypt = require('bcrypt') // importamos para encryptar el password
 
 function getAllUsers(req, res) {
   Users
@@ -15,6 +15,7 @@ function getProfile(req, res) {
 }
 
 function updateProfile(req, res) {
+  if (req.body.password !== undefined) req.body.password = bcrypt.hashSync(req.body.password, 10)
   Users
     .findOneAndUpdate({ _id: res.locals.user._id }, req.body)
     .then((sus) => res.json(sus))
@@ -23,14 +24,14 @@ function updateProfile(req, res) {
 
 function deleteProfile(req, res) {
   Subscription
-    .remove({ userid: res.locals.user._id })
+    .deleteMany({ userid: res.locals.user._id })
     .then(sub => {
       Notification
-        .remove({ userid: res.locals.user._id })
+        .deleteMany({ userid: res.locals.user._id })
         .then(notif => {
           Users
             .findOneAndDelete({ _id: res.locals.user._id })
-            .then(user => res.json(user, notif, sub))
+            .then(user => res.json(user))
         })
     })
 }
