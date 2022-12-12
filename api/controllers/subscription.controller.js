@@ -1,4 +1,5 @@
 const Subscription = require("../models/subscriptions.model");
+const Notification = require("../models/notification.model");
 
 function getSubscriptions(req, res) {
   Subscription
@@ -58,10 +59,14 @@ function updateSubscriptions(req, res) {
 }
 
 function deleteSubscriptions(req, res) {
-  Subscription
-    .findOneAndDelete({ _id: req.params.id })
-    .then((subs) => res.json(subs))
-    .catch((err) => res.json(err));
+  Notification
+    .deleteMany({ subscriptionid: req.params.id })
+    .then(notif => {
+      Subscription
+        .findOneAndDelete({ _id: req.params.id })
+        .then(subs => res.json(subs))
+        .catch((err) => res.json(err));
+    })
 }
 
 module.exports = {
