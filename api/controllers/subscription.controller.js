@@ -1,4 +1,5 @@
 const Subscription = require("../models/subscriptions.model");
+const Notification = require("../models/notification.model");
 
 function getSubscriptions(req, res) {
   Subscription
@@ -9,7 +10,7 @@ function getSubscriptions(req, res) {
 
 function createSubscriptions(req, res) {
   Subscription
-    .create({userid: res.locals.user._id, ...req.body})
+    .create({ userid: res.locals.user._id, ...req.body })
     .then((sus) => res.json(sus))
     .catch((err) => res.json(err));
 }
@@ -22,10 +23,14 @@ function updateSubscriptions(req, res) {
 }
 
 function deleteSubscriptions(req, res) {
-  Subscription
-    .findOneAndDelete({ _id: req.params.id })
-    .then((sus) => res.json(sus))
-    .catch((err) => res.json(err));
+  Notification
+    .deleteMany({ subscriptionid: req.params.id })
+    .then(notif => {
+      Subscription
+        .findOneAndDelete({ _id: req.params.id })
+        .then(sus => res.json(sus))
+        .catch((err) => res.json(err));
+    })
 }
 
 module.exports = {
