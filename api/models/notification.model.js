@@ -18,7 +18,7 @@ const notificationSchema = new mongoose.Schema({
   },
   message: {
     type: String,
-    maxlength: [300, "Max 300 caracteres"],
+    maxlength: [300, "Max 300 characters"],
   },
 });
 

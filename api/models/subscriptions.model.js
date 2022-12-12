@@ -19,7 +19,7 @@ const subscriptionSchema = new mongoose.Schema({
       hiring: {
         type: String,
         require: true,
-        unique: ['year', 'month'],
+        enum: ['year', 'month'],
       },
       quantity: {
         type: Number,
@@ -44,7 +44,7 @@ const subscriptionSchema = new mongoose.Schema({
   },
   notes: {
     type: String,
-    maxLength: [200, "Max 200 caracte"]
+    maxLength: [200, "Max 200 characters"]
   },
   iconName: {
     type: String
