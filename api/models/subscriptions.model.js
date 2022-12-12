@@ -11,7 +11,7 @@ const subscriptionSchema = new mongoose.Schema({
     type: String,
     required: [true, "Name is required"],
   },
-  plans: {
+  plan: {
       name: {
         type: String,
         require: true,
@@ -19,6 +19,7 @@ const subscriptionSchema = new mongoose.Schema({
       hiring: {
         type: String,
         require: true,
+        unique: ['year', 'month'],
       },
       quantity: {
         type: Number,
