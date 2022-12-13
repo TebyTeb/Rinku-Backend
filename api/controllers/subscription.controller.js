@@ -4,6 +4,7 @@ const Notification = require("../models/notification.model");
 function getSubscriptions(req, res) {
   Subscription
     .find({ userid: res.locals.user._id })
+    .populate('userid')
     .then(subs => {
       console.log(subs)
       let result = []
