@@ -3,6 +3,7 @@ const Notification = require("../models/notification.model");
 function getNotification(req, res) {
   Notification
     .find({ userid: res.locals.user._id })
+    .populate('subscriptionid')
     .then((notif) => res.json(notif))
     .catch((err) => res.json(err));
 }
