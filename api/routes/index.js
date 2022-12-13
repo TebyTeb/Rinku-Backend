@@ -1,7 +1,17 @@
-const router = require('express').Router()
+const router = require("express").Router();
 
-const usersRouter = require('./user.router.js')
+const usersRouter = require("./user.router.js");
+const authRouter = require("./auth.router.js");
+const catalogRouter = require("./catalog.router.js");
+const subscriptionRouter = require("./subscription.router.js");
+const notificationRouter = require("./notification.router.js");
+const emailerRouter = require("./emailer.router.js");
 
-router.use('/users', usersRouter)
-console.log('4 monos')
-module.exports = router
+router.use("/users", usersRouter);
+router.use("/auth", authRouter);
+router.use("/catalog", catalogRouter);
+router.use("/subscriptions", subscriptionRouter);
+router.use("/notification", notificationRouter)
+router.use("/emailer", emailerRouter)
+
+module.exports = router;

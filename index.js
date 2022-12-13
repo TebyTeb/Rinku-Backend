@@ -27,7 +27,7 @@ const morgan = require('morgan')
       .use('/api', require('./api/routes'))
 
     // Init server
-    const PORT = process.env.PORT || 8080
+    const PORT = process.env.PORT || 3000
     app.listen(PORT, (err) => {
       if (err) {
         throw new Error(err)

@@ -1,40 +1,38 @@
-const mongoose = require('mongoose');
-require('mongoose-type-email');
+const mongoose = require("mongoose");
+require("mongoose-type-email");
 
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: [true, 'Name is required'],
-    minLength: [3, 'Name too short'],
-    maxLength: [20, 'Name too long']
+    required: [true, "Name is required"],
   },
   surname: {
     type: String,
-    required: [true, 'Surname required'],
-    minLength: [3, 'Surname too short'],
-    maxLength: [20, 'Surname too long']
+    required: [true, "Surname required"],
   },
   age: {
     type: Number,
-    required: [true, 'Age is required']
+    required: [true, "Age is required"],
   },
   email: {
     type: mongoose.SchemaTypes.Email,
-    required: [true, 'Email is required'],
-    unique: [true, 'This email is already registered']
+    required: [true, "Email is required"],
+    unique: [true, "This email is already registered"],
   },
   password: {
     type: String,
-    required: [true, 'Password is required']
+    required: [true, "Password is required"],
   },
-  subscriptions: {
-    type: Array
+  telephone: {
+    type: Number,
+    required: true,
+    minLength: [9, "Telephone is too short"],
+    maxLength: [9, "Telephone is too long"],
   },
-  notifications: {
-    type: Array
-  }
-
+  budget: {
+    type: Number,
+  },
 });
 
-const userModel = mongoose.model('user', userSchema);
+const userModel = mongoose.model("user", userSchema);
 module.exports = userModel;
